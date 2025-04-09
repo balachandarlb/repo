@@ -1,9 +1,9 @@
-name: Playwright Tests
+name: Daily Scheduled Playwright Tests
 
 on:
-  pull_request:
-    branches:
-      - master
+  schedule:
+    - cron: '25 20 * * *'  # Runs daily at 10:25 PM Berlin time (CEST)
+  workflow_dispatch:       # (Optional) lets you manually run it from GitHub UI
 
 jobs:
   test:
