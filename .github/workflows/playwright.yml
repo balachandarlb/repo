@@ -2,8 +2,7 @@ name: Daily Scheduled Playwright Tests
 
 on:
   schedule:
-    - cron: '25 20 * * *'  # Runs daily at 10:25 PM Berlin time (CEST)
-  workflow_dispatch:       # (Optional) lets you manually run it from GitHub UI
+    - cron: '36 20 * * *'  
 
 jobs:
   test:
