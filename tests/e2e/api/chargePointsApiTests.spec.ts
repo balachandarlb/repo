@@ -4,7 +4,7 @@ import ChargePointRequests from "../../src/service/chargePointRequests";
 
 test('get charging points', async () => {
     const response = await new ChargePointRequests().getChargePoint();
-
+//
     expect(response.status()).toBe(200);
 });
 
