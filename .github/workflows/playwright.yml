@@ -3,7 +3,7 @@ name: Playwright Tests
 on:
   pull_request:
     branches:
-      - master  # or main, if your default branch is main
+      - master
 
 jobs:
   test:
@@ -24,5 +24,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Start the app
+        run: npm start &
+      
+      - name: Wait for app to be ready
+        run: npx wait-on http://localhost:3000  
+        
       - name: Run Playwright tests
         run: npx playwright test
