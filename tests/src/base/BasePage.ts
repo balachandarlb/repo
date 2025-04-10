@@ -8,7 +8,14 @@ export default class BasePage {
     return this.page.locator(selector);
   }            
 
-  protected $role(role: AriaRoles, name: string): Locator {
-    return this.page.getByRole(role, { name });
+  protected $role(role: AriaRoles): Locator;
+  protected $role(role: AriaRoles, name: string): Locator;
+
+  protected $role(role: AriaRoles, name?: string): Locator {
+    if (name) {
+      return this.page.getByRole(role, { name });
+    } else {
+      return this.page.getByRole(role); 
   }
+}
 }

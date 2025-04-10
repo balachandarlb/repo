@@ -7,7 +7,7 @@ export default class ChargePointInstallationFormPage extends BasePage{
     }
 
     private readonly title:Locator = this.$role('heading', 'Charge Point Installation Form');
-    private readonly inputSerialNumber:Locator = this.$('input[name="input-serial-number"]');
+    private readonly inputSerialNumber:Locator = this.$role('textbox');
     private readonly add:Locator = this.$role('button', 'Add');
 
     async navigate() {

@@ -1,6 +1,5 @@
 import test, { expect, Page } from "@playwright/test";
 import ChargePointInstallationFormPage from "../../src/pages/ChargePointInstallationFormPage";
-import BaseAPI from "../../src/base/BaseApi";
 
 test.describe('charge point tests', ()=>{
     let page: Page;
